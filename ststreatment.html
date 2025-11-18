@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SOFT TISSUE SARCOMA - TREATMENT</title>
+  <style>
+    :root {
+      --accent: #0b7285;
+      --accent-2: #11a397;
+      --bg: #fff;
+      --muted: #586169;
+      --card: #f7fafc;
+      --border: #e6edf0;
+      --radius: 12px;
+      --pad: 18px;
+      --text: #133a24;
+      --heading: #0a5666;
+    }
+    * { box-sizing: border-box; }
+    body {
+      background: #f4f7f8;
+      color: var(--text);
+      margin: 0;
+      padding: 28px;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .header {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 22px;
+      border-radius: var(--radius);
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: var(--heading);
+      margin: 0 0 6px;
+      font-size: 28px;
+      text-align: center;
+    }
+    p.subtitle {
+      margin: 1px;
+      color: var(--accent-2);
+      font-size: 21px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      margin: 20px 0;
+    }
+    .nav-btn {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      text-align: center;
+      font-weight: 600;
+      color: var(--text);
+      transition: all 0.2s;
+    }
+    .nav-btn:hover {
+      background: #e8f7fb;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+    h2.section-title {
+      color: var(--accent);
+      margin: 20px 0 16px;
+      font-size: 26px;
+      font-weight: 700;
+      border-bottom: 2px solid #dfeff2;
+      padding-bottom: 10px;
+    }
+    .accordion {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+    .accordion-header {
+      padding: 14px 16px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      color: var(--heading);
+      transition: background 0.2s;
+      background: #f9fcfd;
+    }
+    .accordion-header:hover {
+      background: #e8f7fb;
+    }
+    .accordion-header::after {
+      content: '▼';
+      transition: transform 0.2s;
+      font-size: 12px;
+      color: var(--accent);
+    }
+    .accordion.open .accordion-header::after {
+      transform: rotate(180deg);
+    }
+    .accordion-body {
+      padding: 16px;
+      border-top: 1px solid var(--border);
+      display: none;
+      background: #fff;
+    }
+    .accordion.open .accordion-body {
+      display: block;
+    }
+    ul.points {
+      margin: 8px 0 12px 20px;
+      padding: 0;
+    }
+    ul.points li {
+      margin-bottom: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 16px 0;
+    }
+    th, td {
+      padding: 12px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background: #f1fbfc;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .subsection {
+      margin: 16px 0;
+      padding: 12px;
+      background: #fafcfd;
+      border-left: 4px solid var(--accent-2);
+      border-radius: 6px;
+    }
+    .subsection-title {
+      font-weight: 700;
+      color: var(--heading);
+      margin-bottom: 8px;
+    }
+    .footer {
+            background-color: var(--color-surface);
+            border-top: 1px solid var(--color-border);
+            padding: var(--space-24) var(--space-32);
+            text-align: center;
+         }
+
+        .footer p {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-8);
+        }     
+
+        .footer p:last-child {
+            margin-bottom: 0;
+        }  
+
+        .footer a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+         .footer a:hover {
+            text-decoration: underline;
+        }
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      body {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>SOFT TISSUE SARCOMA - TREATMENT</h1>
+    <p class="subtitle">RadOnc Dr Revanth M Khandke</p>
+  </div>
+
+  <div class="grid">
+    <div class="nav-btn" onclick="toggleSection('algorithm')">TREATMENT ALGORITHM</div>
+    <div class="nav-btn" onclick="toggleSection('general')">GENERAL INSTRUCTIONS</div>
+    <div class="nav-btn" onclick="toggleSection('surgery')">SURGERY</div>
+    <div class="nav-btn" onclick="toggleSection('chemo')">CHEMOTHERAPY</div>
+    <div class="nav-btn" onclick="toggleSection('rt')">RADIOTHERAPY</div>
+  </div>
+
+  <!-- TREATMENT ALGORITHM SECTION -->
+  <div id="algorithm" class="section">
+    <h2 class="section-title">TREATMENT ALGORITHM</h2>
+    
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        Stage-Based Treatment Approach
+      </div>
+      <div class="accordion-body">
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>Treatment Approach</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Stage I</strong></td>
+              <td>
+                <ul class="points">
+                  <li>Surgery alone, WLE (limb sparing if extremity)</li>
+                  <li>If R0, can observe if low-grade</li>
+                  <li>If recurrent tumor or salvage surgery may be morbid, should consider a combined modality approach</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Stages II-III</strong></td>
+              <td>
+                <ul class="points">
+                  <li>Favor preoperative RT followed by surgery</li>
+                  <li>If upfront surgery is done, recommend post-op RT</li>
+                  <li>If upfront unplanned excision with positive margin, should consider preoperative RT followed by re-excision</li>
+                  <li>Consider neoadjuvant chemotherapy if high grade and stage T2-T4</li>
+                  <li>In highly select cases, consideration for omitting RT may be reasonable. Factors include small, superficial tumors where widely negative margins can be easily obtained and salvage surgery if the patient were to recur, would not be morbid</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Stage IV</strong></td>
+              <td>
+                <ul class="points">
+                  <li>Chemotherapy, immunotherapy (for select histologies), or targeted therapy upfront</li>
+                  <li>Supportive care for patients with poor PS</li>
+                  <li>Palliative RT</li>
+                  <li>Consideration for consolidative local therapy with RT (+/− surgery) in select cases (ie, oligometastatic/oligoprogressive or unresectable, symptomatic primary)</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- GENERAL INSTRUCTIONS SECTION -->
+  <div id="general" class="section">
+    <h2 class="section-title">GENERAL PRINCIPLES OF PLANNING AND TARGET DELINEATION</h2>
+    
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        General Principles
+      </div>
+      <div class="accordion-body">
+        <ul class="points">
+          <li>Anatomic location, size, depth (with respect to the superficial fascia), and pathological features dictate the management of soft tissue sarcoma (STS).</li>
+          <li>Invasion is typically in the longitudinal direction within muscle and confined to the compartment of origin. Suspicious peritumoral changes, henceforth referred to as edema, may harbor microscopic disease. Edema is most often pronounced in the cranio-caudal dimension and should ordinarily be encompassed in the radiotherapy target volume.</li>
+          <li>STS generally respect barriers to tumor spread such as bone, interosseous membrane, and major fascial planes, and this concept should be exploited in tissue/function preserving radiotherapy planning, especially in extremity lesions.</li>
+          <li>Retroperitoneal tumors commonly grow to a large size and initially displace but eventually invade adjacent organs and tissues.</li>
+          <li>In the event of an "unplanned" surgical resection with positive margins (surgical error), the RT target volume needs to generously include all disturbed muscle compartments in addition to any other tissues considered to be directly involved.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        Target Volume Definitions - Preoperative Extremity STS
+      </div>
+      <div class="accordion-body">
+        <table>
+          <thead>
+            <tr>
+              <th>Target Volume</th>
+              <th>Definition and Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>GTV</strong></td>
+              <td>
+                <ul class="points">
+                  <li>Primary: All gross disease on physical examination and imaging. T1-weighted contrast-enhanced MRI preferable.</li>
+                  <li>Co-registration of the MRI and planning CT is facilitated by immobilizing the patient in the treatment position</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>CTV<sub>50</sub></strong></td>
+              <td>
+                <ul class="points">
+                  <li>Includes all areas at risk of subclinical spread defined by the distance from the GTV or edema</li>
+                  <li>Includes the GTV + a 4-cm margin in the longitudinal dimensions and a 1.5-cm margin in the radial dimension limited to but including any anatomic barrier to tumor spread, such as bone or fascia</li>
+                  <li>Suspicious peritumoural edema, best demonstrated on T2-weighted MRI, may contain microscopic tumor cells and should be contoured separately with an additional margin (usually 1–2 cm)</li>
+                  <li>For cases of "unplanned excision," margins should include p<sub>ostop</sub> GTV or any residual GTV + all surgically manipulated and disturbed tissues and violated fascia + 4 cm longitudinally and 1.5 cm radially limited to but including any barrier to tumor spread</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>PTV<sub>50</sub></strong></td>
+              <td>CTV<sub>50</sub> + 0.5–1.0 cm, determined by individual institutional protocols and procedure</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><em>*Suggested gross tumor dose is 2.0 Gy/fraction to 50 Gy</em></p>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        Target Volume Definitions - Postoperative Extremity STS
+      </div>
+      <div class="accordion-body">
+        <table>
+          <thead>
+            <tr>
+              <th>Target Volume</th>
+              <th>Definition and Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>GTV<sub>postop</sub></strong></td>
+              <td>
+                <ul class="points">
+                  <li>GTV<sub>postop</sub> should identify the original site of the tumor</li>
+                  <li>Important to review and import presurgical imaging when contouring on the CT simulation scan for RT planning to ensure adequate coverage of the original tumor extent</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>CTV<sub>66</sub></strong></td>
+              <td>
+                <ul class="points">
+                  <li>CTV<sub>66</sub> should encompass the entire GTV<sub>postop</sub> + immediate area of surgical change with a 1- to 2-cm margin in the longitudinal plane and a 1.5-cm margin in the transverse plane</li>
+                  <li>This may, but does not need to, include all surgically disturbed tissues, scars, and drain sites</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>PTV<sub>66</sub></strong></td>
+              <td>CTV<sub>66</sub> + 0.5–1.0 cm, determined by individual institutional protocols and procedure</td>
+            </tr>
+            <tr>
+              <td><strong>CTV<sub>56</sub></strong></td>
+              <td>
+                <ul class="points">
+                  <li>Includes all areas at risk of subclinical spread defined by the distance from the GTV<sub>postop</sub> and additional disturbed tissues</li>
+                  <li>Includes the GTV<sub>postop</sub> + a 4-cm margin in the longitudinal dimensions and a 1.5-cm margin in the radial dimension limited to but including any anatomic barrier to tumor disease spread; additional disturbed surgical tissues and any scars or drain sites are ordinarily included with a 1- to 2-cm margin if they are not included in the CTV<sub>66</sub></li>
+                  <li>Suspicious peritumoural edema should be contoured separately and included with an adequate margin. Like surgically disrupted tissue, it is best identified from a recent postoperative MRI scan</li>
+                  <li>Discussion with the surgeon and review of surgical and pathology reports will facilitate the decision about whether or not a seroma, lymphocele, or hematoma should be included</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>PTV<sub>56</sub></strong></td>
+              <td>CTV<sub>56</sub> + 0.5–1.0 cm, determined by individual institutional protocols and procedure</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><em>The table describes single-phase simultaneous boost technique. An alternative is the more traditional-phased shrinking field technique that delivers 50 Gy in 25 fractions to all areas of subclinical disease followed by a boost to deliver the final 16 Gy in 8 fractions using a second radiotherapy plan</em></p>
+        <p><em>*High-risk subclinical dose: 2.0 Gy/fraction to 66 Gy; for lower-risk subclinical regions 1.69 Gy/fraction to 56 Gy delivered to the CTV<sub>56</sub></em></p>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        Target Volume Definitions - Retroperitoneal STS
+      </div>
+      <div class="accordion-body">
+        <table>
+          <thead>
+            <tr>
+              <th>Target Volume</th>
+              <th>Definition and Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>GTV</strong></td>
+              <td>Primary: All gross disease on physical examination and imaging</td>
+            </tr>
+            <tr>
+              <td><strong>CTV</strong></td>
+              <td>
+                <ul class="points">
+                  <li>Includes all areas at risk of subclinical spread defined by the distance from the GTV</li>
+                  <li>Includes the GTV + 2-cm margin in the longitudinal dimensions and a 0.5–2.0-cm margin in the radial dimension limited to but including any anatomic barrier to tumor spread and critical anatomy. For example, if the tumor is approximating an intact liver, 0.5 cm of the liver is included</li>
+                  <li>2-cm margins are usually used posteriorly to include fatty tissues and vessels</li>
+                  <li>Ipsilateral kidney may be sacrificed provided the contralateral kidney provides acceptable function. In such a case, dose to the uninvolved opposite kidney should be kept as low as reasonably achievable</li>
+                  <li>Other organs at risk include the small bowel, liver, spinal cord, and lungs</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>PTV</strong></td>
+              <td>CTV + 0.5 cm, determined by individual institutional protocols and procedure</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><em>*Suggested gross tumor dose range of 50 Gy/25 fractions to 50.4 Gy/28 fractions</em></p>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        Planning and Imaging Recommendations
+      </div>
+      <div class="accordion-body">
+        <ul class="points">
+          <li>For preoperative planning target volume definition, CT simulation imaging fused with MR imaging should be performed, ideally with the patient in the treatment position, in help guide delineation of the gross tumor volume (GTV) and clinical target volume (CTV).</li>
+          <li>For postoperative planning target volume definition after assumed complete surgical resection, there is no GTV to delineate. The location of the original GTV following the operation (GTV<sub>postop</sub>) should be recreated in the planning CT dataset using preoperative CT/MRI imaging if available.</li>
+          <li>Note: The stage classification has changed in the recently published eighth edition of the TNM. Principle changes include different size thresholds for different anatomic sites and the elimination of depth in classification.</li>
+          <li>For preoperative cases, 50 Gy is ordinarily used and target volumes include the GTV and the CTV<sub>50</sub> and should be delineated on every slice on the planning CT.</li>
+          <li>For postoperative RT delivery, 66 Gy is ordinarily used (60 Gy can be used in margin clear, low-grade cases) with an additional peripheral CTV volume for tissues with a lower risk of tumor infestation.</li>
+          <li>For unresectable residual gross disease, 70 Gy in 2 Gy/fraction or equivalent dose fractionation is ordinarily used depending on the tolerance of the anatomic region.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SURGERY SECTION -->
+  <div id="surgery" class="section">
+    <h2 class="section-title">SURGERY</h2>
+    
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        Surgical Principles
+      </div>
+      <div class="accordion-body">
+        <ul class="points">
+          <li>Mainstay of treatment for soft tissue sarcomas</li>
+          <li>Wide local excision with goal of widely negative margin (goal is 2 cm normal tissue around tumor, unless tumor abuts natural barrier to spread like bone or nerve)</li>
+          <li>In unirradiated patients with R1 or R2 resection, consider additional surgery or re-excision prior to RT (or preoperative RT to 50 Gy followed by re-excision)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHEMOTHERAPY SECTION -->
+  <div id="chemo" class="section">
+    <h2 class="section-title">CHEMOTHERAPY</h2>
+    
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        Chemotherapy regimen
+      </div>
+      <div class="accordion-body">
+        <ul class="points">
+          <li>Controversial, as studies have failed to show OS benefit</li>
+          <li>We consider neoadjuvant chemotherapy for patients with high-grade, large (>5 cm) tumors. Neoadjuvant chemotherapy is preferred over adjuvant due to a 20-30% response rate to chemotherapy, thus intact measurable disease is important. Typically assessed response following 2-4 cycles</li>
+          <li>Standard starting chemotherapy regimen involves Adriamycin/ifosfamide for most STS. Other agents commonly used include gemcitabine and docetaxel. Targeted therapy with pazopanib (TKI) and trabectedin (targets FUS-CHOP transcription in myxoid liposarcomas) can be considered as both are FDA approved for advanced STS cases. Can also consider enrolling on trials with other targeted agents (MDM2 inhibitors, immunotherapy)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- RADIOTHERAPY SECTION -->
+  <div id="rt" class="section">
+    <h2 class="section-title">RADIATION TREATMENT TECHNIQUE</h2>
+    
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        Simulation (SIM)
+      </div>
+      <div class="accordion-body">
+        <div class="subsection">
+          <div class="subsection-title">General SIM Principles</div>
+          <p>Depending on anatomic location. Supine position preferred, prone may be needed. For postoperative cases, wire the scar or the entire field to help with target delineation. Do not specifically target drain sites.</p>
+        </div>
+
+        <div class="subsection">
+          <div class="subsection-title">Lower Extremity</div>
+          <p>Vac-Lock for involved extremity. Distal primaries may need CT scan feet first. Frog leg for proximal thigh cases or when needed to create separation with contralateral extremity or decrease inguinal fold. Can elevate noninvolved leg to facilitate better dosimetry and imaging localized to involved leg.</p>
+        </div>
+
+        <div class="subsection">
+          <div class="subsection-title">Upper Extremity</div>
+          <p>Upper Vac-Lok. Arm position depends on location of primary but is usually akimbo. Consider a prone "swimmers" position or abducted arm.</p>
+        </div>
+
+        <div class="subsection">
+          <div class="subsection-title">Distal Extremities</div>
+          <p>Can consider custom cushion +/− aquaplast mask to help with immobilization</p>
+        </div>
+
+        <div class="subsection">
+          <div class="subsection-title">Head and Neck</div>
+          <p>Prior to SIM, consider dental evaluation/need for stent. Aquaplast mask</p>
+        </div>
+
+        <div class="subsection">
+          <div class="subsection-title">Retroperitoneal</div>
+          <p>Vac-Lock. Generally arms up (depending on tumor position). For lesions above the iliac crests, the scan should be 4D to account for breathing motion.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        Dose and Fractionation
+      </div>
+      <div class="accordion-body">
+        <div class="subsection">
+          <div class="subsection-title">Extremity</div>
+          <ul class="points">
+            <li><strong>Preoperative:</strong> 50 Gy in 25 fractions (conventional) is the standard fractionation schedule. If hypofractionation is considered, then preferred regimen is 42.75 Gy in 15 fractions (as per HYPORT-STS).</li>
+            <li><strong>Postoperative:</strong> 60 Gy at 2 Gy/fx for R0 resection, with field size reduction after 50 Gy.</li>
+            <li><strong>Boost to 64-68 Gy for a positive margin.</strong></li>
+            <li>(Despite a higher boost dose, LR is higher in R1/2 resection; in other words, a higher radiation dose does not make up for lack of R0 resection.)</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <div class="subsection-title">Considerations</div>
+          <p>If IMRT preferable for postoperative cases, can also consider a simultaneous-integrated boost technique. (Ex: for R0 resection—CTV2 treated to 59.92 Gy in 28 fractions (2.14 Gy/fx) and CTV1 to 50.4 Gy in 28 fractions (1.8 Gy/fx).</p>
+          <p>If there are positive margins postoperatively, can do SIB technique in 30 fractions with doses of 66 Gy, 60 Gy, and 54 Gy to the different CTVs.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        Retroperitoneal STS - RT Doses
+      </div>
+      <div class="accordion-body">
+        <ul class="points">
+          <li><strong>Definitive:</strong> 60-66 Gy</li>
+          <li><strong>Preoperative:</strong> 50 Gy</li>
+          <li><strong>Postoperative:</strong> 60 Gy</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        Special Clinical Entities
+      </div>
+      <div class="accordion-body">
+        <div class="subsection">
+          <div class="subsection-title">Adult Extraosseous Ewing Sarcoma</div>
+          <ul class="points">
+            <li>Small round blue cell tumor. Very rare. More common in children</li>
+            <li>Translocation t(11;22) or t(21;22) in 95% of cases</li>
+            <li>Upfront intensive chemotherapy for everyone</li>
+            <li>Local tumor treatment is controversial. Consultation at sarcoma specialty center is highly recommended. Often treated with a combined modality approach. However, single modality treatment (either surgery OR can be considered depending on anatomic location and response to chemotherapy</li>
+            <li><strong>RT Doses:</strong> Definitive: 60-66 Gy | Preoperative: 50 Gy | Postoperative: 60 Gy</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <div class="subsection-title">Adult Rhabdomyosarcoma Sarcoma</div>
+          <ul class="points">
+            <li>Adults with RMS do worse than pediatric patients</li>
+            <li>Alveolar, embryonal, and pleomorphic subtypes</li>
+            <li>Pediatric RT doses are insufficient. Normally escalate dose closer to standard adult STS doses upward of 60+ Gy in the definitive setting, respecting adjacent normal tissue tolerance</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <div class="subsection-title">Desmoid Tumors</div>
+          <ul class="points">
+            <li>Not technically malignant (does not metastasize) but is a locally aggressive and potentially destructive neoplasm: observed until local progression is painful and/or morbid. The treatment decision is complex and nuanced. Systemic therapies. Radiation therapy is a local control option. We offer it as an upfront treatment option more commonly in older patients when it is a salvage option in younger patients</li>
+            <li><strong>Definitive treatment schema:</strong> 56 Gy in 28 fx</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <div class="subsection-title">Dermatofibrosarcoma Protuberans</div>
+          <ul class="points">
+            <li>Uncommon, low-grade sarcoma of the skin with a characteristic t(17;22) translocation</li>
+            <li>Primary treatment is surgery, followed by RT for indeterminant/positive margins or if recurrent disease</li>
+            <li>If they have fibrosarcomatous transformation, local treatment is more in line with STS management with both surgery and RT (preoperative preferred)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        IGRT and Planning Directives
+      </div>
+      <div class="accordion-body">
+        <div class="subsection">
+          <div class="subsection-title">IGRT</div>
+          <ul class="points">
+            <li>Related to modality used and body site.</li>
+            <li>Daily kV-aligning to bone typically used. (For 3D planning: consider rotating collimator parallel with long bone for set-up and kV alignment.)</li>
+            <li>Weekly CBCT recommended for adequate coverage as tumors can sometimes change on treatment necessitating an adaptive plan (due to either increased or decreased size of tumor while on treatment).</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <div class="subsection-title">Planning Directive - Conventional Fractionation</div>
+          <ul class="points">
+            <li>Spare at least 1-cm strip of limb circumference/skin</li>
+            <li>Avoid treating entire limb circumference >20 Gy when using IMRT</li>
+            <li>Avoid treating entire femur circumference to ≥50 Gy</li>
+            <li>Spare ½ cross section of weight-bearing bone; V40 < 64%, mean dose ≤ 37 Gy</li>
+            <li>Block part of the joint cavity: V50 < 50%</li>
+            <li>Block major tendons: V50 ≤ 50%</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <div class="subsection-title">Planning Directive - HYPORT Fractionation (15 fractions)</div>
+          <ul class="points">
+            <li>Spare 1-cm strip of limb circumference/skin</li>
+            <li>Avoid treating entire limb circumference >17 Gy</li>
+            <li>Avoid treating entire femur circumference to ≥42.75 Gy</li>
+            <li>Spare ½ cross section of weight-bearing bone; V35 < 65%</li>
+            <li>Block part of the joint cavity: V42.75 < 50%</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <div class="subsection-title">Planning Directive - Retroperitoneal Sarcoma</div>
+          <ul class="points">
+            <li>Bowel Bag: Dmax < 54 Gy, V45 < 195 cc</li>
+            <li>Spine: Dmax < 45 Gy</li>
+            <li>Liver: Mean < 25 Gy, V30 < 30%</li>
+            <li>Kidneys: V20 < 30%, mean < 18 Gy</li>
+            <li>Spleen: Mean < 8 Gy</li>
+            <li>Bladder: Dmax < 54 Gy, V30 < 50%</li>
+            <li>Lungs: V20 < 10%</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        Retroperitoneal STS - Target and Technique
+      </div>
+      <div class="accordion-body">
+        <div class="subsection">
+          <div class="subsection-title">Target (50.4 Gy in 28 fractions)</div>
+          <ul class="points">
+            <li><strong>Preoperative:</strong> Extremity: GTV + 3-4 cm longitudinally sup/inf along fascial planes and 1.5 cm radially to yield CTV</li>
+            <li><strong>Special case:</strong> if subcutaneous tumor: GTV + 3-4 cm circumferential expansion sup/inf and radially, adhering to anatomic barriers</li>
+            <li><strong>Postoperative:</strong> Virtual GTV = preoperative GTV (if imaging available) or postoperative bed. CTV1 as above (3-4 cm sup/inf, 1.5 cm radially off of vGTV). Cone down to CTV2 to 60-68 Gy total (vGTV + 2 cm sup/inf, 1.5 cm radially)</li>
+            <li><strong>RPS:</strong> GTV + 1.5 cm symmetric margins to yield CTV (allowing 5 mm into bowel). Trim from liver, bone kidney, etc. as per Baldini guidelines</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <div class="subsection-title">Considerations</div>
+          <p>CTV expansions can be increased in difficult surgical access areas or superficial spreading histologies. CTVs can be trimmed/carved out of bone if not involved. Do not cover elective nodes for any histology other than alveolar rhabdomyosarcoma. PTV expansions are typically 0.5–1 cm depending on daily imaging techniques</p>
+        </div>
+
+        <div class="subsection">
+          <div class="subsection-title">Technique</div>
+          <ul class="points">
+            <li><strong>3DCRT:</strong> Consider parallel opposed fields (with nondivergent deep border to spare bone/joint). Other beam arrangements (wedge-pair, obliques, etc.) may be used as well. Asymmetric beam weighting can be used if the tumor is not centrally located.</li>
+            <li><strong>IMRT:</strong> Unless 3D planning shows a clear benefit in reduced dose to OAR, IMRT/VMAT is routinely done for improved conformality for proximal lower extremities, thoracic, pelvic, retroperitoneal, head and neck sites.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <footer class="footer">
+        
+            <p><strong>FOR FURTHER DETAILS CONTACT:</strong></p>
+    <a href="https://www.linkedin.com/in/dr-revanth-m-khandke-17342b104" target="_blank" class="contact-link">
+      <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+      </svg>
+      Dr Revanth M Khandke
+    </a> 
+    </footer>
+</div>
+
+<script>
+function toggleSection(id) {
+  // Hide all sections
+  document.querySelectorAll('.section').forEach(s => {
+    s.classList.remove('active');
+  });
+  // Show selected section
+  document.getElementById(id).classList.add('active');
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function toggleAccordion(header) {
+  const accordion = header.parentElement;
+  accordion.classList.toggle('open');
+}
+
+// Initialize: All sections hidden, all accordions closed
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('.section').forEach(s => {
+    s.classList.remove('active');
+  });
+  document.querySelectorAll('.accordion').forEach(acc => {
+    acc.classList.remove('open');
+  });
+});
+</script>
+</body>
+</html>
